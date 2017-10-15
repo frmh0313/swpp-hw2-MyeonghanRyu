@@ -1,4 +1,3 @@
-/*
 import {TestBed, async, ComponentFixture, inject, tick} from '@angular/core/testing';
 import { AppModule } from "./app.module";
 import { AppRoutingModule } from "./app-routing.module";
@@ -18,7 +17,7 @@ class MockBlogService {
 }
 
 describe('AppComponent', () => {
-  /!*
+  /*
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
@@ -39,7 +38,7 @@ describe('AppComponent', () => {
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('h1').textContent).toContain('Welcome to app!');
   }));
-  *!/
+  */
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -108,7 +107,7 @@ describe('when signOut', () => {
       }));
 });
 
-/!*  describe('when ngOnInit', () => {
+/*  describe('when ngOnInit', () => {
     it('should call getSignInedUsed in BlogService', inject([BlogService], (service) => {
       const serviceSpy = spyOn(service, 'getSignInedUser');
     comp.ngOnInit();
@@ -119,7 +118,6 @@ describe('when signOut', () => {
 
     })
     }))
-  });*!/
+  });*/
 
 
-*/
