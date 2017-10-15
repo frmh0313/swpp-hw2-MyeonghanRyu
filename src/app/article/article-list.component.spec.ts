@@ -1,4 +1,3 @@
-/*
 import {TestBed, async, ComponentFixture, inject} from "@angular/core/testing";
 import {ArticleListComponent} from "./article-list.component";
 import {Article, BlogService} from "../blog.service";
@@ -84,14 +83,14 @@ describe('ArticleListComponent', () => {
           });
       }))
 
-    /!*
+    /*
     it('should call getUsers() in BlogService',
       inject([BlogService], (service) => {
       const serviceSpy = spyOn(service, 'getUsers');
       comp.getUsers();
       expect(service.getUsers()).toHaveBeenCalledWith().
       }))
-      *!/
+      */
 
   });
 
@@ -126,4 +125,3 @@ describe('ArticleListComponent', () => {
       }))
   });
 });
-*/

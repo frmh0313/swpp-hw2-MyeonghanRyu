@@ -1,4 +1,3 @@
-/*
 import {TestBed, async, ComponentFixture, inject} from "@angular/core/testing";
 import {BlogService} from "../blog.service";
 import {Location, LocationStrategy} from "@angular/common";
@@ -39,12 +38,12 @@ describe('ArticleEditComponent', () => {
       declarations: [ArticleEditComponent,
         ArticlePreviewComponent,
       ],
-      /!*      ArticleDetailComponent,
+      /*      ArticleDetailComponent,
             CommentListComponent,
             CommentDetailComponent,
             CommentCreateComponent,
             CommentDisplayComponent,
-            CommentEditComponent],*!/
+            CommentEditComponent],*/
       providers: [ Location,
         {provide: BlogService, useClass: MockBlogService}
       ],
@@ -86,12 +85,12 @@ describe('ArticleEditComponent', () => {
 
   // TODO: ArticleEditComponent.goBack
   describe('goBack', () => {
-    /!*    it('should navigate to ["/articles", article.id]', inject(
+    /*    it('should navigate to ["/articles", article.id]', inject(
           [BlogService, Router], (service: BlogService, router: Router) => {
             const routerSpy = spyOn(router, 'navigate');
             comp.goBack();
             expect(routerSpy).toHaveBeenCalled();
-          }));*!/
+          }));*/
     it('should call location.back', async(() => {
       inject([Location], (location) => {
         let locationSpy = spyOn(location, 'back');
@@ -107,4 +106,3 @@ describe('ArticleEditComponent', () => {
 
 });
 
-*/

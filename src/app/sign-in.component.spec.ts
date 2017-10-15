@@ -1,4 +1,3 @@
-/*
 import {TestBed, async, ComponentFixture, inject} from "@angular/core/testing";
 import {BlogService} from "./blog.service";
 import {RouterTestingModule} from "@angular/router/testing";
@@ -86,4 +85,3 @@ describe('SignInComponent', () => {
   });
 
 });
-*/

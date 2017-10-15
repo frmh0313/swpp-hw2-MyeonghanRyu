@@ -1,4 +1,3 @@
-/*
 import {TestBed, async, ComponentFixture, inject} from "@angular/core/testing";
 import {AuthGuard} from "./auth-guard.service";
 import {BlogService} from "./blog.service";
@@ -53,4 +52,3 @@ describe('AuthGuard', () => {
     });
   });
 });
-*/

@@ -1,4 +1,3 @@
-/*
 import {async, inject, TestBed} from "@angular/core/testing";
 import {MockBackend, MockConnection} from "@angular/http/testing";
 import {HttpModule, Http, XHRBackend, Response, ResponseOptions, RequestMethod} from "@angular/http";
@@ -332,10 +331,10 @@ describe('BlogService (mockBackend)', () => {
     let updatedUser: User;
     let updatedArticle: Article;
 
-    /!*    let fakeArticles: Article[];
-        let response: Response;*!/
+    /*    let fakeArticles: Article[];
+        let response: Response;*/
 
-    /!*    beforeEach(inject([Http, XHRBackend], (http: Http, be: MockBackend) => {
+    /*    beforeEach(inject([Http, XHRBackend], (http: Http, be: MockBackend) => {
           backend = be;
           service = new BlogService(http);
           fakeArticles = makeArticleData();
@@ -345,7 +344,7 @@ describe('BlogService (mockBackend)', () => {
 
           let options = new ResponseOptions({status: 200, body: {data: fakeArticles}});
           response = new Response(options);
-        }));*!/
+        }));*/
 
     beforeEach(inject([Http, XHRBackend], (http: Http, be: MockBackend) => {
       backend = be;
@@ -365,7 +364,7 @@ describe('BlogService (mockBackend)', () => {
       });
       service.deleteComment(1);
     });
-    /!* /!*      it('should return void', async(inject([], () => {
+    /* /!*      it('should return void', async(inject([], () => {
             backend.connections.subscribe((c: MockConnection) => c.mockRespond(response));
             service.deleteArticle(0)
               .then(result => {
@@ -395,7 +394,7 @@ describe('BlogService (mockBackend)', () => {
             backend.connections.subscribe((c: mockconnection) => c.mockrespond())
           })))
 
-    *!/!*!/
+    *!/!*/
   });
 
 
@@ -493,4 +492,3 @@ describe('BlogService (mockBackend)', () => {
 });
 
 
-*/
