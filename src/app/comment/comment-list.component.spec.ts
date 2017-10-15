@@ -1,3 +1,4 @@
+/*
 import {TestBed, async, ComponentFixture, inject } from "@angular/core/testing";
 import { CommentListComponent } from "./comment-list.component";
 import { BlogService, Comment } from "../blog.service";
@@ -135,3 +136,4 @@ describe('CommentListComponent', () => {
 
 
 
+*/

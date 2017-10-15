@@ -33,7 +33,7 @@ describe('CommentDetailComponent', () => {
                 CommentEditComponent
             ],
             providers: [
-                {provide: BlogService, userClass: MockBlogService}
+                {provide: BlogService, useClass: MockBlogService}
             ]
         }).compileComponents()
             .then(() => {
