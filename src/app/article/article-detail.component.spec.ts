@@ -108,128 +108,128 @@ describe('ArticleDetailComponent', () => {
         })
       });*/
 
-    // describe('ngOnInit()', () => {
-    //     it('should call getComments in BlogService', async(() => {
-    //         comp.ngOnInit();
-    //         expect(getCommentsSpy).toHaveBeenCalled();
-    //     }));
-    //
-    //     it('should make an article not to be null',
-    //         async(() => {
-    //             comp.ngOnInit();
-    //             expect(comp.article).not.toBeNull();
-    //         }));
-    //
-    //     it('should call getAuthor',
-    //         async(() => {
-    //             comp.getAuthor = createSpy('getAuthor');
-    //             comp.ngOnInit();
-    //             fixture.detectChanges();
-    //             expect(comp.getAuthor).toHaveBeenCalledWith(comp.article);
-    //         }));
-    // });
+    describe('ngOnInit()', () => {
+        it('should call getComments in BlogService', async(() => {
+            comp.ngOnInit();
+            expect(getCommentsSpy).toHaveBeenCalled();
+        }));
 
-    // xdescribe('ngOnInit()', () => {
-    //     it('should call getComments in BlogService',
-    //         inject([BlogService], (service) => {
-    //             // const serviceSpy = spyOn(service, 'getComments')
-    //             //   .and.returnValue(new Promise((resolve, reject) => {
-    //             //     resolve({data: ''})
-    //             //   }));
-    //             comp.ngOnInit();
-    //             // expect(serviceSpy).toHaveBeenCalled();
-    //         }));
-    //
-    //     /*    it('should assign article value to this.article',
-    //           inject([ActivatedRoute], (route) => {
-    //             comp.ngOnInit();
-    //             comp.article = createSpy('article');
-    //             expect(comp.article).not.toBeNull();
-    //           }));*/
-    // });
-    //
-    // describe('getAuthor()', () => {
-    //     it('should call getUser(id) in BlogService',
-    //         inject([BlogService], (service: MockBlogService) => {
-    //             console.log(service);
-    //             // const serviceSpy = spyOn(service, 'getUser')
-    //             //   .and.returnValue(new Promise((resolve, reject) => {
-    //             //     resolve()
-    //             //   }));
-    //             comp.getAuthor(0);
-    //             expect(getUserSpy).toHaveBeenCalledWith(0);
-    //         }))
-    // });
-    //
-    // describe('getAuthorName()', async () => {
-    //     it('should return string type value',
-    //         inject([BlogService], () => {
-    //             comp.ngOnInit();
-    //             fixture.detectChanges();
-    //
-    //             fixture.whenStable()
-    //                 .then(() => {
-    //                     const authorName = comp.getAuthorName();
-    //                     expect(authorName).toEqual(USER[0].name);
-    //                 })
-    //         }));
-    // });
-    //
-    // xdescribe('getComments()', () => {
-    //     it('should call getComments() in BlogService',
-    //         inject([BlogService], (service) => {
-    //             const serviceSpy = spyOn(service, 'getComments')
-    //                 .and.returnValue((resolve, rejct) => {
-    //                     resolve(COMMENTS)
-    //                 });
-    //             comp.getComments();
-    //             expect(serviceSpy).toHaveBeenCalled();
-    //         }));
-    // });
-    //
-    // describe('edit()', () => {
-    //     it(`should navigate to ['articles/id/edit']`,
-    //         fakeAsync(inject([Router, BlogService], (router) => {
-    //             const routerSpy = spyOn(router, 'navigate');
-    //             comp.ngOnInit();
-    //             tick();
-    //             comp.edit();
-    //             expect(routerSpy).toHaveBeenCalledWith(['/articles', comp.article.id, 'edit']);
-    //         })));
-    // });
-    //
-    // describe('delete()', () => {
-    //     it('should call deleteArticle in BlogService',
-    //         async(() => {
-    //             comp.ngOnInit();
-    //             fixture.detectChanges();
-    //             fixture.whenStable()
-    //                 .then(() => {
-    //                 fixture.detectChanges()
-    //                     comp.delete();
-    //                     expect(deleteArticleSpy).toHaveBeenCalledWith("articles", this.article.id);
-    //                 })
-    //         }));
-    //
-    //     it('should call back() function in it',
-    //         async(inject([BlogService], (service) => {
-    //             comp.ngOnInit();
-    //             comp.delete();
-    //             service.delete("article", this.article.id)
-    //                 .then(() =>
-    //                     expect(comp.back()).toHaveBeenCalled());
-    //         })));
-    // });
-    //
-    //
-    // xdescribe('back()', () => {
-    //     it(`should navigate to ['articles']`,
-    //         inject([Router], (router) => {
-    //             const routerSpy = spyOn(router, 'navigate');
-    //             comp.back();
-    //             expect(routerSpy).toHaveBeenCalledWith(['articles']);
-    //         }));
-    //
-    // });
+        it('should make an article not to be null',
+            async(() => {
+                comp.ngOnInit();
+                expect(comp.article).not.toBeNull();
+            }));
+
+        it('should call getAuthor',
+            async(() => {
+                comp.getAuthor = createSpy('getAuthor');
+                comp.ngOnInit();
+                fixture.detectChanges();
+                expect(comp.getAuthor).toHaveBeenCalledWith(comp.article);
+            }));
+    });
+
+    xdescribe('ngOnInit()', () => {
+        it('should call getComments in BlogService',
+            inject([BlogService], (service) => {
+                // const serviceSpy = spyOn(service, 'getComments')
+                //   .and.returnValue(new Promise((resolve, reject) => {
+                //     resolve({data: ''})
+                //   }));
+                comp.ngOnInit();
+                // expect(serviceSpy).toHaveBeenCalled();
+            }));
+
+        /*    it('should assign article value to this.article',
+              inject([ActivatedRoute], (route) => {
+                comp.ngOnInit();
+                comp.article = createSpy('article');
+                expect(comp.article).not.toBeNull();
+              }));*/
+    });
+
+    describe('getAuthor()', () => {
+        it('should call getUser(id) in BlogService',
+            inject([BlogService], (service: MockBlogService) => {
+                console.log(service);
+                // const serviceSpy = spyOn(service, 'getUser')
+                //   .and.returnValue(new Promise((resolve, reject) => {
+                //     resolve()
+                //   }));
+                comp.getAuthor(0);
+                expect(getUserSpy).toHaveBeenCalledWith(0);
+            }))
+    });
+
+    describe('getAuthorName()', async () => {
+        it('should return string type value',
+            inject([BlogService], () => {
+                comp.ngOnInit();
+                fixture.detectChanges();
+
+                fixture.whenStable()
+                    .then(() => {
+                        const authorName = comp.getAuthorName();
+                        expect(authorName).toEqual(USER[0].name);
+                    })
+            }));
+    });
+
+    xdescribe('getComments()', () => {
+        it('should call getComments() in BlogService',
+            inject([BlogService], (service) => {
+                const serviceSpy = spyOn(service, 'getComments')
+                    .and.returnValue((resolve, rejct) => {
+                        resolve(COMMENTS)
+                    });
+                comp.getComments();
+                expect(serviceSpy).toHaveBeenCalled();
+            }));
+    });
+
+    describe('edit()', () => {
+        it(`should navigate to ['articles/id/edit']`,
+            fakeAsync(inject([Router, BlogService], (router) => {
+                const routerSpy = spyOn(router, 'navigate');
+                comp.ngOnInit();
+                tick();
+                comp.edit();
+                expect(routerSpy).toHaveBeenCalledWith(['/articles', comp.article.id, 'edit']);
+            })));
+    });
+
+    describe('delete()', () => {
+        it('should call deleteArticle in BlogService',
+            async(() => {
+                comp.ngOnInit();
+                fixture.detectChanges();
+                fixture.whenStable()
+                    .then(() => {
+                    fixture.detectChanges()
+                        comp.delete();
+                        expect(deleteArticleSpy).toHaveBeenCalledWith("articles", this.article.id);
+                    })
+            }));
+
+        it('should call back() function in it',
+            async(inject([BlogService], (service) => {
+                comp.ngOnInit();
+                comp.delete();
+                service.delete("article", this.article.id)
+                    .then(() =>
+                        expect(comp.back()).toHaveBeenCalled());
+            })));
+    });
+
+
+    xdescribe('back()', () => {
+        it(`should navigate to ['articles']`,
+            inject([Router], (router) => {
+                const routerSpy = spyOn(router, 'navigate');
+                comp.back();
+                expect(routerSpy).toHaveBeenCalledWith(['articles']);
+            }));
+
+    });
 });
 

@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">52.17% </span>
+        <span class="strong">95.65% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>12/23</span>
+        <span class='fraction'>22/23</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">72.73% </span>
@@ -30,18 +30,18 @@
         <span class='fraction'>8/11</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">12.5% </span>
+        <span class="strong">87.5% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>1/8</span>
+        <span class='fraction'>7/8</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">52.63% </span>
+        <span class="strong">94.74% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>10/19</span>
+        <span class='fraction'>18/19</span>
       </div>
     </div>
   </div>
-  <div class='status-line medium'></div>
+  <div class='status-line high'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -140,27 +140,27 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -211,27 +211,27 @@ import {Router} from "@angular/router";
 export class CommentDetailComponent implements OnInit {
   @Input() comment: Comment<span class="branch-1 cbranch-no" title="branch not covered" >;</span>
   author: User;
-<span class="cstat-no" title="statement not covered" >  isEditMode: boolean = false;</span>
+  isEditMode: boolean = false;
 &nbsp;
-<span class="fstat-no" title="function not covered" >  constructor(private <span class="cstat-no" title="statement not covered" ></span>service: BlogService<span class="branch-1 cbranch-no" title="branch not covered" >,</span></span>
-              private <span class="cstat-no" title="statement not covered" >router: Router<span class="branch-2 cbranch-no" title="branch not covered" >)</span> { }</span>
+  constructor(private service: BlogService<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+              private router: Router<span class="branch-2 cbranch-no" title="branch not covered" >) { }</span>
 &nbsp;
-<span class="fstat-no" title="function not covered" >  ngOnInit(): void{</span>
-<span class="cstat-no" title="statement not covered" >    this.getUser();</span>
+  ngOnInit(): void{
+    this.getUser();
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >  getUser(): void {</span></span>
-<span class="cstat-no" title="statement not covered" >    this.service.getUser(this.comment.author_id)</span>
+  getUser(): void {
+    this.service.getUser(this.comment.author_id)
       .then(<span class="fstat-no" title="function not covered" ></span>author =&gt; <span class="cstat-no" title="statement not covered" >this.author = author)</span>;
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  edit(): void {</span>
-<span class="cstat-no" title="statement not covered" >    this.isEditMode = !this.isEditMode;</span>
+  edit(): void {
+    this.isEditMode = !this.isEditMode;
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >  save(): void {</span></span>
-<span class="cstat-no" title="statement not covered" >    this.service.updateComment(this.comment)</span>
-      .then(<span class="fstat-no" title="function not covered" >() =&gt; <span class="cstat-no" title="statement not covered" ></span>this.isEditMode = !this.isEditMode)</span>;
+  save(): void {
+    this.service.updateComment(this.comment)
+      .then(() =&gt; this.isEditMode = !this.isEditMode);
   }
 &nbsp;
   /*
@@ -262,7 +262,7 @@ export class CommentDetailComponent implements OnInit {
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Oct 15 2017 20:41:59 GMT+0900 (KST)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Oct 15 2017 21:17:49 GMT+0900 (KST)
 </div>
 </div>
 <script src="../../../prettify.js"></script>
