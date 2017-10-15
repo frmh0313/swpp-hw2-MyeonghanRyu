@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/app/article/article-detail.component.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">All files</a> / <a href="index.html">src/app/article</a> article-detail.component.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">87.8% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>36/41</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">77.78% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>14/18</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">71.43% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>10/14</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">88.24% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>30/34</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import {Component, OnInit} from "@angular/core";
+import {Router, ActivatedRoute, ParamMap} from "@angular/router";
+import {Article, User} from "../blog.service";
+import {Comment, BlogService} from "../blog.service";
+import {Location} from "@angular/common";
+import 'rxjs/add/operator/SwitchMap';
+&nbsp;
+@Component({
+  template: `
+    &lt;div *ngIf="article &amp;&amp; author &amp;&amp; comments"&gt;
+      &lt;h2&gt;{{ article.title }}&lt;/h2&gt;
+      &lt;p&gt;{{ getAuthorName() }}&lt;/p&gt;
+      &lt;p&gt;{{ article.content }}&lt;/p&gt;
+      &lt;button *ngIf="service.getSignInedUser().id == article.author_id" (click)="edit()"&gt;Edit&lt;/button&gt;
+      &lt;button *ngIf="service.getSignInedUser().id == article.author_id" (click)="delete()"&gt;Delete&lt;/button&gt;
+      &lt;button (click)="back()"&gt;Back&lt;/button&gt;
+      &lt;h3&gt;Comments&lt;/h3&gt;
+      &lt;comments [articleId]="article.id"&gt;&lt;/comments&gt;
+    &lt;/div&gt;
+  `
+})
+export class ArticleDetailComponent implements OnInit {
+  article: Article;
+  author: User;  // 직접 가져오지 않고 부모 component에서 넘겨받을 수 있는 방법?
+  comments: Comment[];
+//TODO
+  /*
+  comment 추가후 push도 필요할 수 있음.
+   */
+  constructor(private service: BlogService<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+              private location: Location<span class="branch-2 cbranch-no" title="branch not covered" >,</span>
+              private router: Router<span class="branch-2 cbranch-no" title="branch not covered" >,</span>
+              private route: ActivatedRoute<span class="branch-2 cbranch-no" title="branch not covered" >) {</span>
+  }
+&nbsp;
+  ngOnInit(): void {
+    this.route.paramMap
+      .switchMap((params: ParamMap) =&gt; this.service.getArticle(+params.get('id')))
+      .subscribe(article =&gt; {
+        console.log(article);
+        this.article = article;
+        this.getAuthor(this.article.author_id);
+      });
+    console.log(this.getComments);
+    this.getComments();
+  }
+&nbsp;
+  getAuthor(id: number): void {
+    this.service.getUser(id)
+      .then(author =&gt; {
+        console.log("I am author: ", author);
+        this.author = author
+      });
+  }
+&nbsp;
+  getAuthorName(): string {
+    return this.author.name;
+  }
+&nbsp;
+  getComments(): void {
+    this.service.getComments().then(comments =&gt; this.comments = comments);
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  edit(): void {</span>
+<span class="cstat-no" title="statement not covered" >    this.router.navigate(['/articles', this.article.id, 'edit']);</span>
+  }
+&nbsp;
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >  delete(): void {</span></span>
+    // this.service.delete("article", this.article.id)
+    //   .then(() =&gt; {
+    //     this.back();
+    //   });
+<span class="cstat-no" title="statement not covered" >    this.service.deleteArticle(this.article.id)</span>
+      .then(<span class="fstat-no" title="function not covered" >() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >      this.back();</span>
+      });
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  back(): void {</span>
+<span class="cstat-no" title="statement not covered" >    this.router.navigate(['/articles']);</span>
+  }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Oct 15 2017 19:57:47 GMT+0900 (KST)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>
